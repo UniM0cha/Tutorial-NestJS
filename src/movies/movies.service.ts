@@ -13,6 +13,7 @@ export class MoviesService {
 
   // id를 받아와서 id값에 만족하는 첫번째 요소의 값을 반환함.
   getOne(id: number): Movie {
+    console.log(id);
     const movie = this.movies.find((movie) => movie.id === id);
     if (!movie) {
       throw new NotFoundException(`Movie with ID ${id} not found.`);
